@@ -20,11 +20,12 @@ public class WebConfig {
     public FilterRegistrationBean corsFilter(){
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowCredentials(true);
-        config.addAllowedOrigin("http://localhost:8100");
-        config.addAllowedOrigin("http://localhost:3000");
-        config.addAllowedOrigin("https://frontoffice.netlify.app");
-        config.addAllowedOrigin("https://vocal-palmier-982552.netlify.app");
+        config.setAllowCredentials(false);
+        // config.addAllowedOrigin("http://localhost:8100");
+        // config.addAllowedOrigin("http://localhost:3000");
+        // config.addAllowedOrigin("https://frontoffice.netlify.app");
+        // config.addAllowedOrigin("https://vocal-palmier-982552.netlify.app");
+         config.addAllowedOrigin("*");
         config.setAllowedHeaders(Arrays.asList(
                 HttpHeaders.AUTHORIZATION,
                 HttpHeaders.CONTENT_TYPE,
